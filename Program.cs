@@ -9,12 +9,24 @@
 [“Russia”, “Denmark”, “Kazan”] → []*/
 
 
-
-string[] array = new string[5];
+System.Console.Write("Введи размер массива: ");
+int sizeArray = Convert.ToInt32(Console.ReadLine());
+string[] array = new string[sizeArray];
+string[] array2 = new string[array.Length / 2];
 for (int i = 0; i < array.Length; i++)
 {
     array[i] = Console.ReadLine()!;
+    if (i < array2.Length)
+    {
+        array2[i] = array[i];
+    }
 }
+System.Console.WriteLine();
+for (int i = 0; i < array2.Length; i++)
+{
+    System.Console.Write($"{array2[i]}");
+}
+
 
 
 
